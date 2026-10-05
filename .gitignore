@@ -1,0 +1,26 @@
+# Segredos
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Dados locais
+data/*.sqlite
+data/*.sqlite-journal
+# Apólices reais de clientes NÃO devem ir para o repositório público
+data/APÓLICE*
+data/APOLICE*
+data/privado/
+
+# Sistema / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
