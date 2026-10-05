@@ -1,0 +1,44 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/claude/policymind-do
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.15.1
+collecting ... collected 33 items
+
+tests/test_comparison_agent.py::test_compara_campos_escalares_e_variacao PASSED [  3%]
+tests/test_comparison_agent.py::test_campos_ausentes_nao_viram_diferenca_inventada PASSED [  6%]
+tests/test_comparison_agent.py::test_compara_listas_de_coberturas PASSED [  9%]
+tests/test_comparison_agent.py::test_item_em_secoes_diferentes_e_reconhecido PASSED [ 12%]
+tests/test_comparison_agent.py::test_lista_ausente_em_um_documento_fica_sem_base PASSED [ 15%]
+tests/test_comparison_agent.py::test_limite_ausente_de_um_lado_nao_e_alteracao PASSED [ 18%]
+tests/test_document_agent.py::test_extrai_texto_de_pdf_textual PASSED    [ 21%]
+tests/test_document_agent.py::test_marcadores_de_pagina_para_citar_fonte PASSED [ 24%]
+tests/test_document_agent.py::test_pagina_sem_texto_aciona_ocr_como_fallback PASSED [ 27%]
+tests/test_document_agent.py::test_pdf_textual_nao_chama_ocr PASSED      [ 30%]
+tests/test_document_agent.py::test_formato_nao_suportado PASSED          [ 33%]
+tests/test_document_agent.py::test_arquivo_vazio PASSED                  [ 36%]
+tests/test_document_agent.py::test_pdf_corrompido PASSED                 [ 39%]
+tests/test_document_agent.py::test_ocr_real_em_imagem PASSED             [ 42%]
+tests/test_normalization_agent.py::test_parse_money_br_preserva_valor PASSED [ 45%]
+tests/test_normalization_agent.py::test_parse_date_br PASSED             [ 48%]
+tests/test_normalization_agent.py::test_normaliza_seguradora_preservando_original PASSED [ 51%]
+tests/test_normalization_agent.py::test_converte_moeda_e_data PASSED     [ 54%]
+tests/test_normalization_agent.py::test_texto_original_prevalece_sobre_numero_divergente PASSED [ 57%]
+tests/test_normalization_agent.py::test_campos_ausentes_permanecem_nulos PASSED [ 60%]
+tests/test_normalization_agent.py::test_sinonimos_viram_mesma_chave PASSED [ 63%]
+tests/test_normalization_agent.py::test_item_sem_sinonimo_mantem_nome_original PASSED [ 66%]
+tests/test_normalization_agent.py::test_conceito_repetido_no_mesmo_documento_nao_colide PASSED [ 69%]
+tests/test_orchestrator.py::test_pipeline_completo_com_ia PASSED         [ 72%]
+tests/test_orchestrator.py::test_ia_indisponivel_usa_regras_e_avisa PASSED [ 75%]
+tests/test_orchestrator.py::test_ia_indisponivel_sem_fallback_registra_erro_sem_derrubar PASSED [ 78%]
+tests/test_orchestrator.py::test_arquivo_invalido_vira_erro_na_etapa PASSED [ 81%]
+tests/test_orchestrator.py::test_exige_dois_documentos PASSED            [ 84%]
+tests/test_orchestrator.py::test_cache_evita_nova_chamada_ao_llm PASSED  [ 87%]
+tests/test_orchestrator.py::test_campos_ausentes_ficam_nulos_na_extracao PASSED [ 90%]
+tests/test_orchestrator.py::test_llm_client_traduz_erros_e_json_invalido PASSED [ 93%]
+tests/test_orchestrator.py::test_base_url_configuravel PASSED            [ 96%]
+tests/test_orchestrator.py::test_rate_limit_429_espera_e_repete PASSED   [100%]
+
+============================== 33 passed in 1.20s ==============================
